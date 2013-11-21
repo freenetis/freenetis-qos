@@ -135,7 +135,7 @@ case "$1" in
 		exit 0
 	;;
 
-	restart)
+	restart|reload|force-reload) # reload is same thing as reload
 		stop_qos
 		start_qos
 		exit 0
