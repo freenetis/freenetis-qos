@@ -20,7 +20,6 @@
 # Email   kliment@freenetis.org                                                #
 #                                                                              #
 # Name    freenetis-qos.init.sh                                                #
-# Version 0.9.0                                                                #
 #                                                                              #
 ################################################################################
 
@@ -108,9 +107,16 @@ status_qos ()
 	fi
 }
 
+version_qos ()
+{
+	VERSION=`"$QOS_SYNCFILE" version 2>/dev/null`
+	
+	echo $VERSION
+}
+
 usage_qos ()
 {
-	echo "usage : `echo $0` (start|stop|restart|status|help)"
+	echo "usage : `echo $0` (start|stop|restart|status|version|help)"
 }
 
 help_qos ()
@@ -119,6 +125,7 @@ help_qos ()
 	echo "  stop - clears firewall rules and settings for QoS"
 	echo "  restart - restarts firewall rules and settings for QoS"
 	echo "  status - returns actual status of QoS"
+	echo "  version - prints version"
 	echo "  help - prints help for QoS"
 }
 
@@ -148,6 +155,11 @@ case "$1" in
 
 	status)
 		status_qos
+		exit 0
+	;;
+	
+	version)
+		version_qos
 		exit 0
 	;;
 

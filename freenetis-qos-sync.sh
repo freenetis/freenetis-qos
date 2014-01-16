@@ -7,9 +7,12 @@
 # Email   kliment@freenetis.org                                                #
 #                                                                              #
 # name    freenetis-qos-sync.sh                                                #
-# version 0.9.0                                                                #
+# version 0.9.4                                                                #
 #                                                                              #
 ################################################################################
+
+# Version	
+VERSION="0.9.4"
 
 #Load variables from config file
 CONFIG=/etc/freenetis/freenetis-qos.conf
@@ -190,6 +193,11 @@ update()
 	start
 }
 
+version ()
+{
+	echo "$VERSION"
+}
+
 case "$1" in
 	update)
 		while (true);
@@ -200,4 +208,8 @@ case "$1" in
 	stop)
 		stop
 	;;
+	version)
+		version
+	;;
 esac
+

@@ -1,3 +1,8 @@
+freenetis-qos (0.9.4) stable; urgency=low
+  * Improoves DEB package condition
+  * Adds support for version displaying
+ -- Ondrej Fibich <ondrej.fibich@gmail.com>  Thu, 16 Jan 2014 20:30:45 +0100
+
 freenetis-qos (0.9.3) stable; urgency=low
   * Improved building of ipset on squeeze (#454)
  -- Ondrej Fibich <ondrej.fibich@gmail.com>  Wed, 23 Jan 2013 14:24:32 +0100
