@@ -12,7 +12,7 @@
 ################################################################################
 
 # Version	
-VERSION="0.9.4"
+VERSION="2.0.0"
 
 #Load variables from config file
 CONFIG=/etc/freenetis/freenetis-qos.conf
